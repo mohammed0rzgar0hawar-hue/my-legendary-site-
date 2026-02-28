@@ -1,119 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HiddenMoe | Official Site</title>
+    <title>HiddenMoe | Exclusive Access</title>
     <style>
-        /* Design-Einstellungen */
         body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #050505; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #0a0a0a; 
             color: white; 
+            text-align: center; 
             margin: 0; 
-            padding: 0;
-        }
-
-        /* Der leuchtende Header */
-        .header {
-            padding: 50px 20px;
-            text-align: center;
-            background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
-            border-bottom: 1px solid #333;
-        }
-
-        h1 { 
-            font-size: 3rem; 
-            margin: 0; 
-            letter-spacing: 5px; 
-            text-transform: uppercase;
-            color: #00ff95; /* Giftgrünes Leuchten */
-            text-shadow: 0 0 20px rgba(0, 255, 149, 0.5);
-        }
-
-        .subtitle {
-            color: #888;
-            font-size: 1.1rem;
-            margin-top: 10px;
-        }
-
-        /* Die Cards mit Glow-Effekt */
-        .container {
             padding: 20px;
+        }
+
+        .header-box {
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 { color: #00ff95; letter-spacing: 3px; text-transform: uppercase; text-shadow: 0 0 15px rgba(0,255,149,0.4); }
+
+        /* Die Liste */
+        .list-container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+            background: #111;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #222;
+        }
+
+        .list-item {
+            padding: 15px;
+            border-bottom: 1px solid #222;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
         }
 
-        .card {
-            background: #111;
-            border: 1px solid #222;
-            padding: 30px;
+        .list-item:last-child { border-bottom: none; }
+        .number { color: #00ff95; font-weight: bold; margin-right: 15px; }
+        .status { color: #555; font-style: italic; }
+
+        /* Der Unlocker Bereich */
+        .unlocker-box {
+            background: #161616;
+            margin-top: 30px;
+            padding: 25px;
             border-radius: 20px;
-            width: 90%;
-            max-width: 500px;
-            margin: 20px 0;
-            transition: 0.3s;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Ein kleiner Lichtstreifen an der Seite der Card */
-        .card::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 5px; height: 100%;
-            background: #00ff95;
-        }
-
-        h2 { color: #fff; margin-top: 0; }
-        p { color: #bbb; line-height: 1.6; }
-
-        /* Der Button */
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 25px;
-            background: transparent;
             border: 2px solid #00ff95;
-            color: #00ff95;
-            text-decoration: none;
+            box-shadow: 0 0 20px rgba(0, 255, 149, 0.2);
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
             border-radius: 10px;
             font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
             transition: 0.3s;
         }
 
-        .btn:hover {
-            background: #00ff95;
-            color: #000;
+        .btn-yt { background: #ff0000; color: white; }
+        .btn-yt:hover { background: #cc0000; }
+
+        .btn-download { 
+            background: #333; 
+            color: #777; 
+            pointer-events: none; /* Erst gesperrt */
+        }
+
+        .active-download {
+            background: #00ff95 !important;
+            color: #000 !important;
+            pointer-events: auto !important;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
+    <div class="header-box">
         <h1>HiddenMoe</h1>
-        <div class="subtitle">Official Website • Digital Content Creator</div>
+        <p>Official Content Hub</p>
     </div>
 
-    <div class="container">
-        <div class="card">
-            <h2>Social Media</h2>
-            <p>Welcome to my official hub. Here you will find all my projects, links, and updates. Stay tuned!</p>
-            <a href="#" class="btn">Follow Me</a>
+    <div class="list-container">
+        <div class="list-item">
+            <span><span class="number">1.</span> Minecraft Mod Unlocker</span>
+            <span style="color: #00ff95;">AKTIV</span>
         </div>
-
-        <div class="card">
-            <h2>Current Status</h2>
-            <p>The site is under construction. I'm currently working on something big for you guys.</p>
+        <div class="list-item">
+            <span><span class="number">2.</span> ...</span>
+            <span class="status">Coming Soon</span>
+        </div>
+        <div class="list-item">
+            <span><span class="number">3.</span> ...</span>
+            <span class="status">Coming Soon</span>
+        </div>
+        <div class="list-item">
+            <span><span class="number">4.</span> ...</span>
+            <span class="status">Coming Soon</span>
+        </div>
+        <div class="list-item">
+            <span><span class="number">5.</span> ...</span>
+            <span class="status">Coming Soon</span>
         </div>
     </div>
 
-    <footer style="text-align: center; padding: 40px; color: #444; font-size: 0.9rem;">
-        &copy; 2026 HIDDENMOE. ALL RIGHTS RESERVED.
-    </footer>
+    <div class="unlocker-box" id="unlock-section">
+        <h3>🔓 Link Freischalten</h3>
+        <p>Erledige die Schritte, um den Mediafire-Link zu erhalten:</p>
+        
+        <a href="https://www.youtube.com/@who_is_moe404_08?sub_confirmation=1" target="_blank" class="btn btn-yt" onclick="step1()">1. Kanal abonnieren</a>
+        
+        <a href="https://www.youtube.com/@who_is_moe404_08" target="_blank" class="btn btn-yt" onclick="step2()">2. Video liken</a>
+
+        <a href="HIER_DEIN_MEDIAFIRE_LINK" id="downloadBtn" class="btn btn-download">3. Download starten</a>
+    </div>
+
+    <script>
+        let task1 = false;
+        let task2 = false;
+
+        function step1() {
+            task1 = true;
+            checkStatus();
+        }
+
+        function step2() {
+            task2 = true;
+            checkStatus();
+        }
+
+        function checkStatus() {
+            if(task1 && task2) {
+                const btn = document.getElementById('downloadBtn');
+                btn.classList.add('active-download');
+                btn.innerText = "3. JETZT DOWNLOADEN";
+            }
+        }
+    </script>
 
 </body>
 </html>
-
